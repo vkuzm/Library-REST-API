@@ -1,0 +1,22 @@
+spring:
+  thymeleaf:
+    cache: false
+
+  datasource:
+    initialization-mode: never
+    username: sa
+    password:
+    url: jdbc:h2:mem:testdb
+    platform: org.hibernate.dialect.H2Dialect
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+    database: h2
+
+  data:
+    rest:
+      base-path: "/api"
+      detection-strategy: annotated
