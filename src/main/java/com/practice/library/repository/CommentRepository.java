@@ -9,4 +9,6 @@ public interface CommentRepository {
     Optional<Comment> insert(Comment comment);
 
     List<Comment> findByBookId(long bookId);
+
+    void remove(long commentId);
 }

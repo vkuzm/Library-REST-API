@@ -7,6 +7,7 @@ import com.practice.library.repository.AuthorRepository;
 import com.practice.library.repository.BookRepository;
 import com.practice.library.repository.CommentRepository;
 import com.practice.library.repository.GenreRepository;
+import java.io.File;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -80,6 +81,6 @@ public class TestData implements CommandLineRunner {
         book.setAuthor(author.get());
         book.setGenre(genre.get());
 
-        bookRepo.insert(book);
+        bookRepo.insert(book, null);
     }
 }

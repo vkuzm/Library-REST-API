@@ -2,8 +2,10 @@ package com.practice.library.repository;
 
 import com.practice.library.domain.Book;
 
+import java.io.File;
 import java.util.List;
 import java.util.Optional;
+import org.springframework.web.multipart.MultipartFile;
 
 public interface BookRepository {
     Optional<Book> findById(long id);
@@ -12,9 +14,9 @@ public interface BookRepository {
 
     List<Book> findAll();
 
-    Optional<Book> insert(Book book);
+    Optional<Book> insert(Book book, MultipartFile image);
 
-    void update(Book book);
+    Optional<Book> update(Book book, MultipartFile image);
 
     void delete(long id);
 }
