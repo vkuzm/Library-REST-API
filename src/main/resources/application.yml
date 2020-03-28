@@ -22,11 +22,10 @@ spring:
       detection-strategy: annotated
 
 amazonProperties:
-  accessKey: "AKIAXVMYN72BL6MKFKXO"
-  secretKey: "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"
+  accessKey: "ACCESS_AWS_KEY"
+  secretKey: "SECRET_AWS_KEY"
 
 amazonS3Properties:
-  accessKey: "AKIAXVMYN72BL6MKFKXO"
   bucketName: "book-store-storage"
 
 amazonSQSProperties:
